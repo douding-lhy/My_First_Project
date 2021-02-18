@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/**Blocks**/
+html{
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1613125700782-8394bec3e89d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body{
+    font-size: 20px;
+    font-weight: 480;
+}
+section{
+    width: 85%;
+    max-width: 660px;
+    margin: 30vh auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: #d8d8d8;
+    padding: 15px;
+    border-radius: 4px;
+    min-height: 45vh;
+    animation: drop 1.75s ease;
+}
+
+
+/**Content**/
+label{
+    float: left;
+    text-align: center;
+    background: linear-gradient(to right, #56566e, #5d5d97);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+}
+.input{
+    float: right;
+    width: 63%;
+    margin: 10px 0;
+    padding: 9px;
+    border-radius: 4px;
+}
+textarea{
+    resize: vertical;
+    min-height: 20vh;
+}
+
+
+/**button**/
+button{
+    float: right;
+    width: 20%;
+    padding: 5.6px 8px;
+    margin-top: 8px;
+    background-color: #9276e0;
+    border: 4px solid #9276e0;
+    color: white;
+    font-size: 17.6px;
+    font-weight: 480;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    border: 4px solid #ffff;
+    color: #9276e0;
+}
+
+/**Flexibility**/
+@media all and (max-width: 400px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .input{
+        width: 80%;
+        margin: auto;
+    }
+     button{
+        width: 80%;
+        margin: 8px auto;
+     }
+}
+
+/**Aimation**/
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
